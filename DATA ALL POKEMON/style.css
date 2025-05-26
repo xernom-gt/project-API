@@ -1,3 +1,119 @@
-body{
-    font-family: sans-serif;
+/* style.css */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to bottom, #ffebee, #fce4ec);
+    margin: 0;
+    padding: 20px;
+    color: #212121;
+}
+
+h1 {
+    text-align: center;
+    color: #d32f2f;
+    font-size: 32px;
+    text-shadow: 1px 1px 0 #fff;
+    margin-bottom: 30px;
+}
+
+input[type="text"] {
+    display: block;
+    margin: 0 auto 25px auto;
+    padding: 12px 20px;
+    width: 85%;
+    max-width: 420px;
+    font-size: 16px;
+    border: none;
+    border-radius: 15px;
+    box-shadow: inset 0 0 5px #d32f2f;
+    background-color: #fff3f3;
+    color: #333;
+    transition: 0.3s ease;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    box-shadow: 0 0 8px 2px #ef5350;
+}
+
+#pokemon-details {
+    background: #ffffff;
+    border: 3px solid #f44336;
+    max-width: 520px;
+    margin: 0 auto;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    display: none;
+    animation: fadeIn 0.5s ease-in-out;
+    position: relative;
+}
+
+#pokemon-details::before {
+    content: '';
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    width: 40px;
+    height: 40px;
+    background: radial-gradient(circle, #42a5f5, #1e88e5);
+    border-radius: 50%;
+    box-shadow: inset 0 0 5px #fff, 0 0 10px #1e88e5;
+}
+
+#pokemon-details h2 {
+    text-align: center;
+    color: #1976d2;
+    font-size: 26px;
+    margin-bottom: 15px;
+}
+
+#pokemon-img {
+    display: block;
+    margin: 0 auto 20px auto;
+    width: 160px;
+    height: 160px;
+    object-fit: contain;
+    border: 4px solid #e57373;
+    border-radius: 50%;
+    background-color: #fff8f8;
+    box-shadow: 0 0 10px rgba(244, 67, 54, 0.2);
+}
+
+p {
+    font-size: 16px;
+    margin: 10px 0;
+    color: #424242;
+}
+
+p strong {
+    color: #d32f2f;
+}
+
+.evolution-chain {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 15px;
+}
+
+.evolution-chain img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    border-radius: 10px;
+    border: 2px solid #9e9e9e;
+    background-color: #f0f0f0;
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+.evolution-chain img:hover {
+    transform: scale(1.1);
+    border-color: #1e88e5;
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
 }
